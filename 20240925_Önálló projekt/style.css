@@ -1,0 +1,285 @@
+body{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+
+}
+
+/* navbar */
+nav{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   background-color: rgb(100, 100, 226);
+   width: 100%;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   padding: 5px 0;
+}
+
+nav section{
+    display: flex;
+    justify-content: end;
+    flex: 10%;
+}
+
+nav img{
+    margin: 0 10px;
+    height: 70px;
+}
+
+ul{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+ 
+    font-size: 120%;
+    list-style-type: none;
+    margin: 5px 20px;
+    transition-duration: 0.6s;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+
+ul li:hover{
+    transition-duration: 0.6s;
+    transform: scale(1.2);
+}
+
+
+nav h1{
+    flex: 10%;  
+    color: white;
+ 
+    
+}
+
+/* main */
+
+
+/* udvozles */
+main section#udvozles{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+    background-image: url(kepek/logo2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 10%;
+}
+
+main section#udvozles div{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+main section#udvozles div h1{
+ 
+    font-size: 250%;
+    margin: 5%;
+    text-align: center;
+    color: rgb(100, 100, 226);
+
+}
+
+main section#udvozles div p{
+    text-align: center;
+    font-size: 180%;
+}
+
+/* kepzeseink*/
+
+main section#kepzeseink{
+    background-color: rgb(100, 100, 226); 
+    border-radius: 2%;
+    padding: 3% 0;
+
+}
+
+main section#kepzeseink h1{
+    color: white;
+    font-size: 250%;
+    padding-left: 3%;
+}
+
+main section#kepzeseink h2{
+    color: white;
+    margin-bottom: 5%;
+    font-size: 200%;
+    text-align: center;
+
+}
+
+main section#kepzeseink article{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main section#kepzeseink article:nth-of-type(1){
+    margin-bottom: 10%;
+}
+
+.kartya{
+    margin: 0 5%;
+    padding-bottom: 2%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 60%;
+    text-align: center;
+}
+
+main section#kepzeseink .kartya img{
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+main section#kepzeseink .kartya h3, main section#kepzeseink .kartya p{
+    padding: 2%;
+}
+
+/* osztondij*/
+main section#osztondijak{
+    position: relative;
+}
+
+main section#osztondijak h1{
+    font-size: 250%;
+    padding-right: 3%;
+    color: rgb(100, 100, 226);
+    text-align: end;
+    margin-bottom: 0;
+}
+
+main section#osztondijak article div.péz{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+main section#osztondijak article div img.kep{
+    position: absolute;
+    top: 10%;
+    height: 30%;
+    z-index: -1;
+}
+
+main section#osztondijak article div.péz p{
+    width: 50%;
+    text-align: center;
+    font-size: 150%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    font-style: italic;
+    background-color: rgb(100, 100, 226);
+    height: 100%;
+}
+
+footer p{
+    margin: 10% 0 0 0;
+    padding: 3%;
+}
+
+main section#osztondijak article#osszegek{
+    display: flex;
+    justify-content: center;
+}
+
+main section#osztondijak article#osszegek div:first-child, main section#osztondijak article#osszegek div:nth-child(2){
+    width: 20%;
+    text-align: center;
+}
+
+.harmadevtol{
+    display: flex;
+    justify-content: center;
+}
+
+.harmadevtol section{
+    width: 30%;
+}
+
+
+
+@media (width < 700px){
+    nav{
+        flex-direction: column;
+        background-color: rgb(100, 100, 226);
+        width: 100%;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding: 5px 0;
+     }
+
+    ul{
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+        text-align: center;
+
+    }
+
+    main section#kepzeseink article{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .kartya{
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 30px;
+    }
+
+    main section#kepzeseink{
+        border-radius: 0%;
+    }
+    
+    main section#kepzeseink .kartya img{
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    main section#osztondijak article div{
+        background-size: 50%;
+    }
+
+    main section#osztondijak article div.péz p{
+        width: 100%;
+        margin: 0 2%;
+    }
+}
+
+@media (width < 1300px){
+    main section#osztondijak article#osszegek{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main section#osztondijak article#osszegek div:first-child, main section#osztondijak article#osszegek div:nth-child(2){
+        width: 100%;
+        text-align: center;
+    }
+}
